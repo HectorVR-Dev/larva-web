@@ -59,7 +59,7 @@ Este script realiza:
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/usuario/larva_web.git
+git clone [https://github.com/usuario/larva_web.git](https://github.com/HectorVR-Dev/larva-web)
 cd larva_web
 
 # Instalar dependencias
