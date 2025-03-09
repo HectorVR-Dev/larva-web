@@ -1,0 +1,10 @@
+fastapi
+flask
+flask_socketio
+flask_cors
+uvicorn
+aiortc
+opencv-python
+numpy
+av
+eventlet

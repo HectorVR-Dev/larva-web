@@ -1,0 +1,63 @@
+Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<AsyncClient._handle_eio_message() done, defined at /home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py:557> exception=AttributeError("'RTCPeerConnection' object has no attribute 'restartIce'")>
+Traceback (most recent call last):
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py", line 574, in _handle_eio_message
+    await self._handle_event(pkt.namespace, pkt.id, pkt.data)
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py", line 412, in _handle_event
+    r = await self._trigger_event(data[0], namespace, *data[1:])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py", line 466, in _trigger_event
+    ret = await handler(*args)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/jetson.py", line 118, in on_renegotiate
+    await pc.restartIce()
+          ^^^^^^^^^^^^^
+AttributeError: 'RTCPeerConnection' object has no attribute 'restartIce'
+Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<AsyncClient._handle_eio_message() done, defined at /home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py:557> exception=AssertionError()>
+Traceback (most recent call last):
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py", line 574, in _handle_eio_message
+    await self._handle_event(pkt.namespace, pkt.id, pkt.data)
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py", line 412, in _handle_event
+    r = await self._trigger_event(data[0], namespace, *data[1:])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/socketio/async_client.py", line 466, in _trigger_event
+    ret = await handler(*args)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/jetson.py", line 103, in on_candidate
+    candidate = candidate_from_sdp(data["candidate"])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/venv/lib/python3.12/site-packages/aiortc/sdp.py", line 100, in candidate_from_sdp
+    assert len(bits) >= 8
+           ^^^^^^^^^^^^^^
+AssertionError
+✅ Conectado al servidor de señalización (namespace /)
+🔥 Cámara inicializada correctamente
+Renegociación solicitada por nuevo cliente.
+Renegociación: reiniciando ICE en conexión existente
+📥 Respuesta recibida
+📡 Candidato recibido: {'candidate': 'candidate:0 1 UDP 2122252543 f430b84c-fa8d-4df6-a851-d4da9aad1e23.local 54294 typ host', 'sdpMLineIndex': 0, 'sdpMid': '0', 'usernameFragment': '4f048341'}
+📡 Candidato recibido: {'candidate': 'candidate:3 1 TCP 2105524479 f430b84c-fa8d-4df6-a851-d4da9aad1e23.local 9 typ host tcptype active', 'sdpMLineIndex': 0, 'sdpMid': '0', 'usernameFragment': '4f048341'}
+📡 Candidato recibido: {'candidate': 'candidate:1 1 UDP 1686052863 150.214.127.109 27975 typ srflx raddr 0.0.0.0 rport 0', 'sdpMLineIndex': 0, 'sdpMid': '0', 'usernameFragment': '4f048341'}
+📡 Candidato recibido: {'candidate': '', 'sdpMLineIndex': 0, 'sdpMid': '0', 'usernameFragment': '4f048341'}
+Canal de datos 'control' abierto
+📷 Cámara liberada en destructor.
+ℹ️ Desconexión transitoria (polling) del servidor
+Traceback (most recent call last):
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/jetson.py", line 178, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/hevasr/larva/Dashboard-WebRtc-main/jetson/jetson.py", line 171, in main
+    await asyncio.sleep(1)
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
