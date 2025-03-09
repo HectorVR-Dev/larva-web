@@ -1,5 +1,5 @@
 # Proyecto Larva Web
-
+![Image](https://github.com/user-attachments/assets/a74e2f35-0f70-4dfa-b088-487a7fffdbb2)
 ## Descripción
 Sistema de comunicación y procesamiento distribuido que integra aplicaciones cliente, señalización de red y procesamiento con hardware Jetson.
 
